@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakanda In Aracoara</title>
+    <!--Adicionando o css bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!--Adicionando a fonte do google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <!--Adicionando o Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!--Adicionando a favicon-->
+    <link rel="shortcut icon"
+        href="src/wakanda/wakanda/ProjetoWakanda/ChatGPT Image 11 de dez. de 2025, 13_59_05 (1).png"
+        type="image/x-icon">
+
+    <!-- Adicionando o meu CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+   
+    <!--Conteúdo principal da página-->  
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+<main>
+    <div class="fundo">
+    <section class="formulario">
+
+        <div class="topo-aviso">
+            ⏰ HOJE: GARANTA ACESSO ANTECIPADO À NOVA TURMA!
+        </div>
+        <br><br><br>
+        <div class="container pagamento-grupo">
+            <h1>Curso de Trancista em Grupo</h1>
+
+            <p>
+            <h4>12x de R$ 20,83
+                <br> Ou R$ 249,90 à vista
+            </h4>
+            <br>
+
+            <div class="descricao">
+                <p>Escolha Cartão de Crédito ou PIX e seu acesso é liberado instantaneamente e enviado para seu e-mail
+                    de cadastro. </p>
+            </div>
+
+            <form>
+
+                <input type="email" placeholder="Seu email">
+                <input type="email" placeholder="Digite novamente seu email para confirmar">
+                <input type="text" placeholder="Nome completo">
+
+                <div class="telefone">
+                    <input type="text" class="sp_celphones" placeholder="Digite seu telefone">
+                </div>
+
+            </form>
+
+            <div class="obrigatorio">
+                <h6>Celular é obrigatório.</h6>
+            </div>
+            <div class="pagamentos">
+
+                <div class="opcao">
+                    <img src="src/cartaodecredito.png">
+                    <span>Cartão de crédito</span>
+                </div>
+
+                <div class="opcao">
+                    <img src="src/pix.png">
+                    <span>Pix</span>
+                </div>
+
+                <div class="opcao">
+                    <img src="src/boleto.png">
+                    <span>Boleto</span>
+                </div>
+
+                <div class="opcao ativo">
+                    <img src="src/hotmart.png">
+                    <span>Conta Hotmart</span>
+                </div>
+
+            </div>
+
+            <div class="comprarAgora">
+                <button> Comprar agora </button>
+            </div>
+
+            <br><br>
+            <div class="infos">
+                <p>Tem dúvidas? <a href="#">Entre em contato</a></p>
+                <p>Não conseguiu finalizar a compra? <a href="#">Acesse nossa central de Ajuda.</a></p>
+            </div>
+            <br>
+
+
+            <!-- mascara de telefone -->
+        </div>
+        <script>
+            var SPMaskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+                spOptions = {
+                    onKeyPress: function (val, e, field, options) {
+                        field.mask(SPMaskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+            $('.sp_celphones').mask(SPMaskBehavior, spOptions);
+
+
+        </script>
+    </section>
+</div>
+</main>
+
+    <footer class="bg-dark pt-5 pb-5 mt-auto position-relative">
+        <div class="container d-flex flex-column align-items-center">
+            <ul class="d-flex list-unstyled gap-3 m-0 w-100 justify-content-center align-items-center">
+                <li>
+                    <a class="text-brand-branco fs-7 text-decoration-none" href="produto.html">
+                        Ver todos os produtos
+                    </a>
+                </li>
+                <li>
+                    <a class="text-brand-branco fs-7 text-decoration-none" href="sobre.html">Sobre nós</a>
+                </li>
+                <li>
+                    <a class="text-brand-branco fs-7 text-decoration-none" href="">Suporte</a>
+                </li>
+                <li>
+                    <a class="text-brand-branco fs-7 text-decoration-none" href="">Termos de Uso</a>
+                </li>
+                <li>
+                    <a class="text-brand-branco fs-7 text-decoration-none" href="">Política de Privacidade</a>
+                </li>
+            </ul>
+            <div class="whatsapp-flutuante">
+                <a href="#" class="dedinho"></a>
+                <img class="rede" src="/src/wpp.png" alt="WhatsApp">
+            </div>
+        </div>
+    </footer>
+
+<!-- Adicionando o JS do bootstrap-->
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
