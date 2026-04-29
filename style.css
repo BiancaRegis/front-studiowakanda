@@ -134,7 +134,9 @@ font-family: "Rubik Mono One", monospace;
 .btn-brand-cinza{
     background-color: #E3E3E3;
 }
-
+.btn-brand-laranja{
+    background: var(--brand-laranja);
+}
 .btn-brand-laranjarosa {
     background: linear-gradient(292deg, rgba(240, 117, 45, 1) 39%, rgba(211, 34, 108, 1) 69%);
 }
@@ -462,7 +464,7 @@ font-family: "Rubik Mono One", monospace;
     box-shadow: none;
 }
 
-button {
+.login button {
     width: 100%;
     padding: 15px;
     border: none;
@@ -476,6 +478,18 @@ button {
 
 .mudarsenha {
     background: #f5f5f5;
+}
+
+.mudarsenha button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #d81b60, #ff6f00);
 }
 
 .login {
@@ -641,4 +655,3 @@ form input{
 #painel-administrativo{
     display: none;
 }
- 

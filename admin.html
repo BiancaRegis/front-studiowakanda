@@ -27,144 +27,248 @@
 <body class="d-flex flex-column min-vh-100">
     <!--Cabeçalho da página-->
     <header>
-    <nav class="navbar navbar-expand-lg sticky-top bg-brand-branco">
-        <div class="container">
-            <div class="titulo">
+        <nav class="navbar navbar-expand-lg sticky-top bg-brand-branco">
+            <div class="container">
+                <div class="titulo">
 
-                <a class="navbar-brand d-flex align-items-center justify-content-center text-decoration-none"
-                    href="index.html">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <img class="logo" src="src/wakanda/wakanda/ProjetoWakanda/logo.png" alt="logotipo wakanda">
-                        <span class="text-brand-preto fw-light  fs-6">
-                            Wakanda In<br>Aracoara
-                        </span>
+                    <a class="navbar-brand d-flex align-items-center justify-content-center text-decoration-none"
+                        href="index.html">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img class="logo" src="src/wakanda/wakanda/ProjetoWakanda/logo.png" alt="logotipo wakanda">
+                            <span class="text-brand-preto fw-light  fs-6">
+                                Wakanda In<br>Aracoara
+                            </span>
+                        </div>
+
+                </div>
+                </a>
+
+                <!-- Adicionando o botão de responsividade-->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="fa-solid fa-bars fa-lg" style="color: #FC8301;"></span>
+                </button>
+
+                <!--Criação do menu com links-->
+                <div class="texto d-flex flex-column">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav text-brand-laranja fw-semibold gap-lg-4">
+                            <li class="nav-item">
+                                <a class="nav-link dedinho text-brand-laranja fs-5" href="index.html">
+                                    ÍNICIO
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dedinho text-brand-laranja fs-5" href="sobre.html">
+                                    SOBRE
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dedinho text-brand-laranja fs-5" href="contato.html">
+                                    CONTATOS
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dedinho text-brand-laranja fs-5" href="planos.html">
+                                    PLANOS
+                                </a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-admin">
+                                <a class="nav-link text-brand-laranja fs-5" href="admin.html"></a>
+                                ADMIN
+                            </li>
+                        </ul>
                     </div>
 
-            </div>
-            </a>
-
-            <!-- Adicionando o botão de responsividade-->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="fa-solid fa-bars fa-lg" style="color: #FC8301;"></span>
-            </button>
-
-            <!--Criação do menu com links-->
-            <div class="texto d-flex flex-column">
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav text-brand-laranja fw-semibold gap-lg-4">
-                        <li class="nav-item">
-                            <a class="nav-link dedinho text-brand-laranja fs-5" href="index.html">
-                                ÍNICIO
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link dedinho text-brand-laranja fs-5" href="sobre.html">
-                                SOBRE
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link dedinho text-brand-laranja fs-5" href="contato.html">
-                                CONTATOS
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link dedinho text-brand-laranja fs-5" href="planos.html">
-                                PLANOS
-                            </a>
-                        </li>
-                        <li class="nav-item d-none" id="nav-admin">
-                            <a class="nav-link text-brand-laranja fs-5" href="admin.html"></a>
-                            ADMIN
-                        </li>
-                    </ul>
+                    <div class="container d-flex justify-content-center">
+                        <input type="text"
+                            class="from-control rounded-pill px-5 py-2 shadow-sm border-0 bg-light text-center"
+                            placeholder="Pesquisar">
+                    </div>
                 </div>
 
-                <div class="container d-flex justify-content-center">
-                    <input type="text"
-                        class="from-control rounded-pill px-5 py-2 shadow-sm border-0 bg-light text-center"
-                        placeholder="Pesquisar">
-                </div>
-            </div>
-
-            <!--Ícones-->
-            <div class="d-flex align-items-center justify-content-center gap-4 text-brand-laranja">
-                <span class="fs-6 fw-bold d-none d-lg-block"></span>
-                <a href="login.html" class="text-brand-laranja text-decoration-none" id="btn-auth"
-                    title="Login / Cadastro">
-                    <i class="fa-solid fa-user-pen fs-3" style="color: black;"></i>
-                </a>
-                <!-- <a href="carrinho.html" class="text-brand-laranja text-decoration-none position-relative">
+                <!--Ícones-->
+                <div class="d-flex align-items-center justify-content-center gap-4 text-brand-laranja">
+                    <span class="fs-6 fw-bold d-none d-lg-block"></span>
+                    <a href="login.html" class="text-brand-laranja text-decoration-none" id="btn-auth"
+                        title="Login / Cadastro">
+                        <i class="fa-solid fa-user-pen fs-3" style="color: black;"></i>
+                    </a>
+                    <!-- <a href="carrinho.html" class="text-brand-laranja text-decoration-none position-relative">
                     <i class="fa-solid fa-basket-shopping fs-3" style="color: black;"></i>
                     <span id="cart-count" class="badge bg-brand-laranja rounded-pill cart-badge d-none">
                         0
                     </span>
                 </a> -->
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
     <div class="bg-brand-laranja py-2"></div>
     <br>
     <div class="bg-brand-rosaescuro py-2"></div>
-    
+
     <!--Conteúdo principal da página-->
     <main class="flex-grow-1">
 
-        <div id="login-adm" class="container-fluid login-admin-container">
+        <div id="login-admin" class="container-fluid login-admin-container">
             <div class="card shadow p-4 text-center">
                 <h3 class="mb-4">Acesso Restrito</h3>
+
                 <div class="mb-3">
-                    <input type="text" id="admin-cpf" class="from-control" placeholder="CPF admin">
+                    <input type="text" id="admin-email" class="form-control" placeholder="email admin">
                 </div>
+
                 <div class="mb-3">
-                    <input type="password" id="admin-senha" class="from-control" placeholder="Senha">
+                    <input type="password" id="admin-senha" class="form-control" placeholder="Senha">
                 </div>
+
                 <button id="btn-login-admin" class="btn btn-brand-rosalaranja w-100">Entrar no Painel
                 </button>
-                <hr>
-                <a href="./index.html" class="text-muted small">Voltar para o site</a>
-
+                <hr><a href="./index.html" class="text-muted small">Voltar para o site</a>
             </div>
         </div>
+
         <!-- Painel administrativo -->
-         <div id="painel-administrativo" class="py-5">
+        <div id="painel-administrativo" class="py-5">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="fw-bold text-brand-rosaescuro">
-                        <i class="fa-solid fa-gear"></i>Gestão de Produtos
+                        <i class="fa-solid fa-gear"></i>Painel Administrativo do Studio
                     </h2>
-                    <button id="btn-cadastrar" class="btn btn-brand-rosalaranja fw-bold" data-bs-toggle="modal" data-bs-target="#adminModalCadastrar">
-                        <i class="fa-solid fa-plus"></i>Novo Produto
+                    <button id="btn-cadastrar" class="btn btn-brand-laranja fw-bold text-brand-branco"
+                        data-bs-toggle="modal" data-bs-target="#adminModalCadastrar">
+                        <i class="fa-solid fa-plus"></i>
+                        Cadastrar Produto
                     </button>
                     <button id="btn-logout" class="btn btn-outline-secondary">Sair
                     </button>
                 </div>
-                
+
                 <!-- Criação da tabela dos produtos -->
-                 <div class="card shadow-sm border-0">
+                <div class="card shadow-sm border-0">
                     <div class="card-body p-0 table-responsive">
                         <table class="table table-hover align-middle mb-0">
                             <thead class="table-light">
                                 <!-- Cabeçalho da tabela -->
                                 <tr>
                                     <th>Código</th>
-                                    <th>Imagem</th>
+                                    <th>Nome</th>
+                                    <th>Descrição</th>
+                                    <th>Carga Horária</th>
+                                    <th>Nível</th>
+                                    <th>Situação</th>
                                     <th class="text-end">Ações</th>
                                 </tr>
                             </thead>
-
+                            <tbody id="tabela-admin">
+                            </tbody>
                         </table>
-
                     </div>
 
-                 </div>
+                </div>
+            </div>
+        </div>
 
+        <!--MODAL DE CADASTRO-->
+        <div class="modal fade" id="adminModalCadastrar" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="form-admin">
+                        <div class="modal-header bg-brand-rosaescuro">
+                            <h5 class="modal-title fw-bold text-brand-branco">Adicionar Curso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-6 mb-3">
+                                <label for="">Id do Curso</label>
+                                <input type="text" id="cadastro-id" class="from-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Título</label>
+                                <input type="text" id="cadastro-nome" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Descrição</label>
+                                <input type="text" id="cadastro-descricao" class="form-control" rows="2" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Carga Horária</label>
+                                <input type="number" id="cadastro-hora" class="form-control" min="1" step="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>Nível</label>
+                                <select id="cadastro-nivel" class="form-control">
+                                    <option value="1">Iniciante</option>
+                                    <option value="2">Intermediário</option>
+                                    <option value="3">Avançado</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label>Situação</label>
+                                <select id="cadastro-situacao" class="form-control">
+                                    <option value="ativo">Ativo</option>
+                                    <option value="inativo">Inativo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success fw-bold" id="admin-salvar">
+                                Salvar
+                            </button>
+                        </div>
+                    </form>
 
+                </div>
 
             </div>
 
+        </div>
 
-         </div>
+        <!--MODAL DE EDIÇÃO-->
+        <div class="modal fade" id="adminModalEditar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="form-editar">
+                        <div class="modal-header bg-warning">
+                            <h5 class="modal-title fw-bold text-brand-rosaescuro" id="adminModalLabel">Editar Curso
+                            </h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" class="form-control" id="editar-id" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Nome do Curso</label>
+                            <input type="text" class="form-control" id="editar-nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Descrição</label>
+                            <input type="text" class="form-control" id="editar-descricao" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Carga Horária</label>
+                            <input type="number" class="form-control" id="editar-hora" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Nível</label>
+                            <input type="text" class="form-control" id="editar-nivel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Situação</label>
+                            <input type="text" class="form-control" id="editar-situacao" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btn-atualizar" class="btn btn-success fw-bold" type="submit">Atualizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
 
 
     </main>
@@ -198,6 +302,13 @@
             </div>
         </div>
     </footer>
+
+
+
     <!-- Adicionando o JS do bootstrap-->
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin.js"></script>
+</body class="d-flex flex-column min-vh-100">
+
+</html>
