@@ -68,7 +68,7 @@ $(document).ready(function () {
 
         $.get(`${API_URL}/cursos`, function (cursos) {
 
-            let linhas = '';
+            let linhas = "";
 
             cursos.forEach(cur => {
 
@@ -97,12 +97,11 @@ $(document).ready(function () {
                             <i class="fa-solid fa-trash"></i>
                     </button>
                 </td>
-            </tr>
-            `;
+            </tr> `
             });
 
             $('#tabela-admin').html(linhas);
-        });
+        })
     }
 
 
@@ -146,42 +145,47 @@ $(document).ready(function () {
 
 
 
-    // ABRIR EDITAR
-    $(document).on('click', '#btn-editar', function () {
+    // ABRIR modal EDITAR
+    $(document).on('click', '#btn-editar', function (cur) {
 
-        const id = $(this).data('id');
+        const id = $(this).data("id");
 
-        $.get(`${API_URL}/cursos`, function (cursos) {
+        $.get(`${API_URL}/cursos?id=${id}`, function (cur) {
 
-            const cur = cursos.find(c => c.idCurso == id);
+            const dados = Array.isArray(cur) ? cur.find(p => p.idCurso == id) : cur;
 
-            if (cur) {
-                $('#editar-id').val(cur.idCurso);
-                $('#editar-nome').val(cur.titulo);
-                $('#editar-descricao').val(cur.descricao);
-                $('#editar-hora').val(cur.cargaHoraria);
-                $('#editar-nivel').val(cur.nivel);
-                $('#editar-situacao').val(cur.situacao);
+            if (dados) {
+                $('#editar-id').val(dados.idCurso);
+                $('#editar-nome').val(dados.titulo);
+                $('#editar-descricao').val(dados.descricao);
+                $('#editar-hora').val(dados.cargaHoraria);
+                $('#editar-nivel').val(dados.nivel);
+                $('#editar-situacao').val(dados.situacao);
+                $('#adminModalEditar').modal('show');
             }
-        });
-    });
+        })
+    })
 
 
 
-    // ATUALIZAR
-    $('#form-editar').submit(function (e) {
 
-        e.preventDefault();
 
+    // // SALVAR ATUALIZAÇÃO
+    $('#btn-atualizar').click(function () {
         const id = $('#editar-id').val();
+        console.log(id)
+
 
         const dadosAtualizados = {
+            // idCurso: $('#editar-id').val(),
             titulo: $('#editar-nome').val(),
             descricao: $('#editar-descricao').val(),
             cargaHoraria: $('#editar-hora').val(),
             nivel: $('#editar-nivel').val(),
             situacao: $('#editar-situacao').val()
-        };
+        }
+        console.log(id)
+        console.log(dadosAtualizados)
 
         $.ajax({
             url: `${API_URL}/cursos/${id}`,
@@ -190,38 +194,41 @@ $(document).ready(function () {
             data: JSON.stringify(dadosAtualizados),
 
             headers: {
-                Authorization: `Bearer ${localStorage.getItem('token')}`
+                'Authorization': 'Bearer' + localStorage.getItem('token')
             },
 
             success: function () {
-                alert('Curso atualizado com sucesso!');
+                alert('Dados atualizados com sucesso!');
                 $('#adminModalEditar').modal('hide');
-                carregarCursosAdmin();
+                $('#form-editar')[0].reset();
+                // carregarCursosAdmin();
             },
 
             error: function (err) {
-                alert('Erro ao atualizar curso.');
+                alert('Não foi possível atualizar os dados.');
                 console.log(err);
             }
         });
-    });
+
+    })
 
 
 
     // EXCLUIR
     $(document).on('click', '#btn-excluir', function () {
 
-        const id = $(this).data('id');
+        const id = $(this).data("id");
+        console.log(id)
 
         if (confirm('Deseja excluir este curso?')) {
 
             $.ajax({
                 url: `${API_URL}/cursos/${id}`,
                 type: 'DELETE',
-
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                    'Authorization': 'Bearer' + localStorage.getItem('token')
                 },
+
 
                 success: function () {
                     alert('Curso removido com sucesso!');
@@ -232,9 +239,9 @@ $(document).ready(function () {
                     alert('Erro ao excluir curso.');
                     console.log(err);
                 }
-            });
+            })
         }
-    });
+    })
 
     verificarSessaoAdmin();
-})
+});
